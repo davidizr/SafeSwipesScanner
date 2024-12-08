@@ -8,7 +8,7 @@ function PhotoUploadPage() {
   const [previewFaceImage, setPreviewFaceImage] = useState(null);
   const [isVerifying, setIsVerifying] = useState(false);
   const [verificationResults, setVerificationResults] = useState(null);
-  const host_ip = '192.168.86.108' //replace with 'localhost' to open in your local browser
+  const host_ip = process.env.REACT_APP_API_URL || 'localhost';
 
   const handleBlacklistFromPhotos = async () => {
     const formData = new FormData();
