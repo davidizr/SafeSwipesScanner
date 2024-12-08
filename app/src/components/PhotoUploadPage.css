@@ -1,0 +1,386 @@
+.scan-header {
+  text-align: center;
+  margin-bottom: 0rem;
+}
+
+.scan-header h1 {
+  color: #5271ff;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1.1rem;
+}
+.scan-main {
+  background: white;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.upload-section {
+  text-align: center;
+  padding: 1rem 1rem;
+}
+
+.upload-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: #5271ff;
+}
+.file-input {
+  display: none;
+}
+
+.upload-button {
+  display: inline-block;
+  background-color: #5271ff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 1rem;
+}
+.upload-button:hover {
+  background-color: #4560e6;
+}
+
+.preview-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.upload-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.upload-section {
+  width: 100%;
+}
+
+.upload-box {
+  flex: 1;
+  width: 100%;
+  padding: 1rem 0rem;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.optional-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0rem;
+}
+
+.upload-header {
+  color: #5271ff;
+}
+
+.upload-text {
+  padding: 0rem 1rem;
+}
+
+.upload-box.has-image {
+  padding: 0;
+}
+
+.face-preview {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.upload-success {
+  color: #4CAF50;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.id-preview {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.verification-section {
+  margin-top: 2rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.verify-button, .reset-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: white;
+}
+
+.verify-button {
+  background-color: #1c7832;
+}
+
+.verify-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.reset-button {
+  background-color: #5271ff;
+}
+
+.results-container h3 {
+  color: #1a73e8;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.results-grid {
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  outline: 1px solid #5271ff;
+  background-color: #5272ff16;
+}
+
+.result-item {
+  width: 100%;
+  display: table;
+  padding: 0.7rem 0rem;
+  border: none;
+  border-bottom: 1px solid #000000;
+  margin-bottom: 0.5rem;
+  outline: none;
+}
+
+.result-item:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  display: table-cell;
+  text-align: left;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.value {
+  display: table-cell;
+  text-align: right;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.error-message {
+  color: #dc3545;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.scan-another-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: white;
+  background-color: #1a73e8;
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 200px;
+}
+
+.scan-another-button:hover {
+  background-color: #1557b0;
+}
+
+.warnings-section {
+  margin-top: 0rem;
+  padding-top: 0rem;
+  padding-bottom: 1.5rem;
+}
+
+.warnings-section h4 {
+  color: #dc3545;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.warnings-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.warning-item {
+  background: #fff3f3;
+  border: 1px solid #ffcdd2;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.warning-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.warning-severity {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.warning-item {
+  position: relative;
+}
+
+.warning-code {
+  font-weight: 600;
+  color: #dc3545;
+}
+
+.warning-severity {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.warning-severity.medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.warning-severity.high {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.warning-severity.critical {
+  background: #dc3545;
+  color: white;
+}
+
+.warning-description {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: left;
+  margin: 0;
+}
+
+.value.invalid {
+  color: #dc3545;
+}
+
+@media (max-width: 390px) {
+  .result-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .scan-another-button {
+    max-width: 100%;
+  }
+  
+  .results-container {
+    padding: 1rem;
+  }
+  
+  .warning-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .warning-severity {
+    align-self: flex-start;
+  }
+}.validation-warning-box {
+  background: #fff3f3;
+  border: 1px solid #ffcdd2;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.validation-warning-box.expired {
+  background: #ffebb4;
+  border: 1px solid #dc3545;
+}
+.validation-warning-box.blacklist,
+.validation-warning-box.underage {
+  background: #ffe4e6;
+  border: 1px solid #dc3545;
+}
+
+.action-buttons .blacklist-button {
+  background-color: #b82c3a;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-buttons .blacklist-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.success-message {
+  color: #333;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;}
+
+.upload-container,
+.verification-section,
+.results-container {
+  width: 100%;
+  max-width: none;
+  margin: 1;
+  padding: 0rem;
+}
+
+.validation-message-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 0rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  outline: 2px solid #dc3545;
+}
+
+.logo {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 0rem;
+}
