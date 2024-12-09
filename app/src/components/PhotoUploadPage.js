@@ -8,7 +8,7 @@ function PhotoUploadPage() {
   const [previewFaceImage, setPreviewFaceImage] = useState(null);
   const [isVerifying, setIsVerifying] = useState(false);
   const [verificationResults, setVerificationResults] = useState(null);
-  const host_ip = process.env.REACT_APP_API_URL || 'localhost';
+  const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 
   const handleBlacklistFromPhotos = async () => {
     const formData = new FormData();
@@ -18,7 +18,7 @@ function PhotoUploadPage() {
     }
   
     try {
-      const response = await fetch(`http://${host_ip}:5000/api/blacklist-individual`, {
+      const response = await fetch(`${backendUrl}/api/blacklist-individual`, {
         method: 'POST',
         body: formData
       });
@@ -75,7 +75,7 @@ function PhotoUploadPage() {
         formData.append('facePhoto', selectedFaceImage);
       }
 
-      const response = await fetch(`http://${host_ip}:5000/api/upload-photo`, {
+      const response = await fetch(`${backendUrl}/api/upload-photo`, {
         method: 'POST',
         body: formData
       });
