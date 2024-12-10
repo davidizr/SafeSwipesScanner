@@ -8,7 +8,8 @@ function PhotoUploadPage() {
   const [previewFaceImage, setPreviewFaceImage] = useState(null);
   const [isVerifying, setIsVerifying] = useState(false);
   const [verificationResults, setVerificationResults] = useState(null);
-  const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+  console.log("API URL:", process.env.VAR_NAME)
 
   const handleBlacklistFromPhotos = async () => {
     const formData = new FormData();
