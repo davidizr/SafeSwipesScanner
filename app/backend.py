@@ -13,16 +13,20 @@ import base64
 import json
 from datetime import datetime
 from dotenv import load_dotenv
+# Load environment variables
+load_dotenv()
 
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'blob'}
+
+aws_link = os.getenv('REACT_APP_BACKEND_URL')
 
 app = Flask(__name__)
 CORS(app, resources={
     r"/api/*": {
         "origins": [
             "https://main.d2bkr9t6m7ypy2.amplifyapp.com",
-            "http://localhost:3000"
+            aws_link
         ],
         "methods": ["GET", "POST", "OPTIONS"],
         "allow_headers": ["Content-Type"]
@@ -67,8 +71,7 @@ def validate_id(document_image, face_image=None):
     :param face_image: Optional - a path to an image of the person to validate the ID of
     :param output_file: Optional - the location to save the results of the ID validation
     '''
-    # Load environment variables
-    load_dotenv()
+
     
     # Get API key and profile ID from environment variables
     api_key = os.getenv('ID_ANALYZER_API_KEY')
